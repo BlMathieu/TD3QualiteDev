@@ -51,7 +51,7 @@ public class Simulateur implements Initializable {
 		++nbElements;
 		Personne p = new Personne("P" + nbElements, x, y, COLS[nbElements % COLS.length]);
 		contenu.getChildren().add(p.getMaForme());
-		p.setOnMouseClicked(this::mouseClicked);
+		p.getMaForme().setOnMouseClicked(this::mouseClicked);
 	}
 
 	/**

@@ -54,12 +54,6 @@ public class Personne implements Groupe{
 		getMaForme().setTranslateX(x);
 	}
 
-	@Override
-	public void seDeplacer() {
-		//this.setLayoutX();
-	//	this.setLayoutY();
-	}
-
 	public String toString(){
 		return this.nom+" "+this.couleur+ " ";
 	}

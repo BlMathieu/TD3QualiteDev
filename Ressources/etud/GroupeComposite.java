@@ -44,7 +44,7 @@ public class GroupeComposite implements Groupe{
 	public GroupeComposite(String nom, String couleur) {
 		setMaForme(monGroupe);
 		mesCouleurs = new Color[1];
-		mesCouleurs[0] = Color.valueOf(getCouleur());
+		mesCouleurs[0] = Color.valueOf(couleur);
 		list = new ArrayList<>();
 		getMaForme().addEventFilter(MouseEvent.MOUSE_CLICKED, this::mouseClicked);
 	}
@@ -94,11 +94,11 @@ public class GroupeComposite implements Groupe{
 
 	
 	public void couleurNormal() {
-//TODO
+		couleur = this.mesCouleurs[0].toString();
 	}
 
 	public void couleurSelection() {
-//TODO
+		couleur = Color.GREEN.toString();
 	}
 
 	
@@ -131,9 +131,9 @@ public class GroupeComposite implements Groupe{
 	}
 
 	@Override
-	public void seDeplacer() {
+	public void deplacer() {
 		for (Personne personne:list) {
-			personne.seDeplacer();
+			personne.deplacer();
 		}
 	}
 }
