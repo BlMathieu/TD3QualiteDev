@@ -80,7 +80,7 @@ public class Simulateur implements Initializable {
 	 */
 	public void creerGroupes(ActionEvent event) {
 		++nbElements;
-		Groupe grp = new Groupe("groupe" + nbElements, COLS[hasard.nextInt(COLS.length)]);
+		GroupeComposite grp = new GroupeComposite("groupe" + nbElements, COLS[hasard.nextInt(COLS.length)]);
 		grp.setOnMouseClicked(this::mouseClicked);
 		contenu.getChildren().add(grp.getMaForme());
 		for (Entite p : selection) {
@@ -97,6 +97,8 @@ public class Simulateur implements Initializable {
 	 * @see MenuItem#getOnAction()
 	 */
 	public void deplacer(ActionEvent event) {
+		for (Entite e :selection) {
+			e.deplacer();
 		}
 	}
 

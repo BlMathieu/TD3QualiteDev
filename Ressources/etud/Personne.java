@@ -5,7 +5,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 
 /** Représente une personne */
-public class Personne {
+public class Personne implements Groupe{
 	
 	
 	/** Le nom de l'entité */
@@ -53,4 +53,15 @@ public class Personne {
 		// Ajouter un délpacement
 		getMaForme().setTranslateX(x);
 	}
+
+	@Override
+	public void seDeplacer() {
+		//this.setLayoutX();
+	//	this.setLayoutY();
+	}
+
+	public String toString(){
+		return this.nom+" "+this.couleur+ " ";
+	}
+
 }
