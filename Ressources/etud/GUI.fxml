@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="etud.Simulateur"
+            prefHeight="400.0" prefWidth="600.0">
+    <top>
+    <MenuBar style="-fx-background-color: lightgray;">
+        <Menu text="_Sélection">
+            <MenuItem text="_Créer Groupe" onAction="#creerGroupes"/>
+            <MenuItem text="_Déplacer" onAction="#deplacer"/>
+        </Menu>
+        <Menu text="_Créer">
+            <MenuItem text="_Groupe" onAction="#creerGroupes"/>
+            <MenuItem text="_Personne" onAction="#creerPersonnne"/>
+        </Menu>
+        <Menu text="_?">
+            <MenuItem text="_A Propos" onAction="#aPropos"/>
+            <SeparatorMenuItem/>
+            <MenuItem text="_Quitter" onAction="#quitter"/>
+        </Menu>
+    </MenuBar>
+    </top>
+    <center>
+    <Pane fx:id="contenu" >
+        <!-- Ici se trouveront les personnes -->
+    </Pane>
+    </center>
+</BorderPane>
